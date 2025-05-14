@@ -1,38 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Germania+One&display=swap');
-.germania-one-regular {
-  font-family: "Germania One", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
+@import url(styles.css);
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-:root{
-  --color-naranja: #FF4719;
-  --color-oscuro: #2B2B2B;
-  --color-gris: #B7AAAA;
-  --color-palido: #F3F3F3;
-}
 .container{
-  background-color: var(--color-palido);
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 10fr 1fr 1fr;
-  grid-template-rows: 1fr 3fr 4fr 0.5fr 2fr;
+  grid-template-rows: 1fr 2fr 4fr 0.5fr 2fr;
   grid-template-areas:
   "header header header header header"
   "vacio1 deco1 titulo deco2 vacio3"
   "login login login login login"
   "vacio4 deco3 vacio5 deco4 vacio6"
   "boton boton boton boton boton";
-}
-.header{
-  grid-area: header;
-  background-color: var(--color-oscuro);
+  color: var(--color-palido);
+  font-size: var(--tamano-mediano);
+  font-family: var(--fuente-texto);
+  text-transform: capitalize;
+  background-color: var(--color-palido);
 }
 .boton{
   grid-area: boton;
@@ -40,14 +24,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-.boton_submit{
+.boton__submit{
   display: block;
   width: 30%;
-  padding: 30px;
+  padding: 10px;
   background-color: var(--color-naranja);
   border: solid 0px var(--color-naranja);  
-  border-radius: 30px;
+  border-radius: 20px;
   font-size: 60px;
   font-weight: bold;
   text-transform: uppercase;
@@ -55,9 +40,27 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.boton_submit:hover{
+.boton__submit:hover{
   background-color: var(--color-palido);
   color: var(--color-naranja);
+  box-shadow: 0 0 20px var(--color-palido);
+}
+.boton__registro{
+  margin: 10px;
+  gap: 10px;
+  display: flex;
+  text-transform: uppercase;
+  font-size: var(--tamano-pequeno);
+  color: var(--color-gris);
+}
+.boton__registro > a{
+  color: var(--color-palido);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.boton__registro > a:hover{
+  color: var(--color-naranja);
+  text-shadow: 0 0 10px var(--color-naranja), 0 0 20px var(--color-naranja);
 }
 .login{
   grid-area: login;
@@ -68,22 +71,47 @@
   flex-direction: column;
 }
 .login__input{
-  width: 60%;
-  margin-top: 30px;
+  width: 100%;
   display: block;
   border-radius: 30px;
-  cursor: pointer;
-  padding: 20px;
-  font-size: 75px;
+  cursor:text;
+  padding: 15px 100px 15px 30px;
+  font-size: var(--tamano-grande);
   background-color: var(--color-palido);
   border: solid 0px var(--color-palido);
   color: var(--color-oscuro);
   outline: none;
-  font-weight: bold;
+  transition: 0.3s;
+  color: var(--color-naranja);
+}
+.login__texto{
+  transition: 0.3s;
 }
 .login__input::placeholder{
   color: var(--color-gris);
-  opacity: 100;
+}
+.login__input:focus{
+  width: 120%;
+  transform: translateX(-100px);
+}
+.login__contenedor:focus-within .login__texto{
+  transform: translateX(-100px);
+}
+.titulo{
+  grid-area: titulo;
+  width: 100%;
+  color: var(--color-naranja);
+  font-size: var(--tamano-titulo);
+  font-family: var(--fuente-titulo);
+  text-align: center;
+  align-content: center;
+}
+.titulo > p:last-child{
+  color: var(--color-gris);
+}
+.header{
+  grid-area: header;
+  background-color: var(--color-oscuro);
 }
 .deco1{
   grid-area: deco1;
@@ -112,13 +140,4 @@
 .vacio6{
   grid-area: vacio6;
   background-color: var(--color-gris);
-}
-.titulo{
-  grid-area: titulo;
-  color: var(--color-naranja);
-  font-size: 50px;
-  text-align: center;
-  align-content: center;
-  font-family: Germania One;
-  width: 100%;
 }
