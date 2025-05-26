@@ -8,17 +8,57 @@
   <link rel="shortcut icon" href="../img/logo.png" />
 </head>
 <body>
-  <div class="container">
+  <form class="container" action="login.html">
     <header class="header">
-      <p>titulos</p>
+      <p>crear cuenta</p>
     </header>
     <section class="section">
-      <p>texto</p>
-      <input type="text" class="textbox" placeholder="texto del text">
+      <div class="personal">
+      <div class="personal__contenedor">
+        <p class="personal__titulo">documento:</p>
+        <input type="text" class="personal__textbox" placeholder="Ingrese el Documento">
+      </div>
+      <div class="personal__contenedor">
+        <p class="personal__titulo">nombres:</p>
+        <input type="text" class="personal__textbox" placeholder="Ingrese el Nombres">
+      </div>
+      <div class="personal__contenedor">
+        <p class="personal__titulo">apellidos:</p>
+        <input type="text" class="personal__textbox" placeholder="Ingrese el Apellidos">
+      </div>
+      <div class="personal__contenedor">
+        <p class="personal__titulo">fecha Nacimiento:</p>
+        <input type="date" class="personal__fecha">
+      </div>
+      </div>
+      <div class="trabajo">
+        <div class="trabajo__fotografia">
+          <div class="trabajo__foto">
+            <img src="../img/pfp.png" alt="perfil" class="trabajo__perfil">
+          </div>
+          <div class="trabajo__subir">
+            <p class="trabajo_titulo">fotografia:</p>
+            <button class="trabajo__boton"> subir </button>
+            <button class="trabajo__boton"> eliminar </button>
+          </div>
+        </div>
+        <div class="trabajo__contenedor"></div>
+        <p class="trabajo__titulo">contraseña:</p>
+        <input type="text" class="trabajo__textbox" placeholder="Ingrese la Contraseña">
+          <div class="trabajo__contenedor">
+            <p for="fruta">tipo de oficio:</p>
+            <select class="trabajo__combox">
+              <option value="">N/A</option>
+              <option value="">Mesero</option>
+              <option value="">Cajero</option>
+            </select>
+            
+          </div>
+      </div>
     </section>
     <section class="botones">
-      <a href="#" class="botones__boton">Botoncito</a>
+      <button type="submit" class="botones__boton">registrarse</button>
     </section>
-  </div>
+  </form>
 </body>
 </html>
