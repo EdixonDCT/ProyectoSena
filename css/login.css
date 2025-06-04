@@ -43,7 +43,7 @@
 .boton__submit:hover{
   background-color: var(--color-palido);
   color: var(--color-naranja);
-  box-shadow: 0 0 20px var(--color-palido);
+  transform:scale(1.1)
 }
 .boton__registro{
   margin: 10px;

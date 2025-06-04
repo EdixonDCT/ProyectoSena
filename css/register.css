@@ -59,13 +59,13 @@ input::placeholder {
   flex-direction: column;
 }
 .trabajo__boton{
-  width: 100%;
+  width: 85%;
   margin-top: 20px;
   display: block;
   padding: 10px;
-  background-color: var(--color-naranja);
+  background-color: var(--color-oscuro);
   border: solid 0px var(--color-naranja);  
-  border-radius: 30px;
+  border-radius: 20px;
   font-size: var(--tamano-mediano);
   font-weight: bold;
   text-transform: uppercase;
@@ -75,8 +75,8 @@ input::placeholder {
 }
 .trabajo__boton:hover{
   background-color: var(--color-palido);
-  color: var(--color-naranja);
-  box-shadow: 0 0 20px var(--color-palido);
+  color: var(--color-gris);
+  transform:scale(1.1)
 }
 .trabajo__combox{
   width: 90%;
@@ -115,5 +115,5 @@ input::placeholder {
 .botones__boton:hover{
   background-color: var(--color-palido);
   color: var(--color-naranja);
-  box-shadow: 0 0 20px var(--color-palido);
+  transform:scale(1.1)
 }
