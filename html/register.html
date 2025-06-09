@@ -38,8 +38,10 @@
           </div>
           <div class="trabajo__subir">
             <p class="trabajo_titulo">fotografia:</p>
-            <button class="trabajo__boton"> subir </button>
-            <button class="trabajo__boton"> eliminar </button>
+            <label class="trabajo__boton" for="ArchivoFoto">Seleccionar fotografia</label>
+            <input type="file" id="ArchivoFoto">
+            <span id="ArchivoEstado">ningun archivo seleccionado</span>          
+            <button class="trabajo__boton"> eliminar fotografia</button>
           </div>
         </div>
         <div class="trabajo__contenedor"></div>
@@ -50,7 +52,7 @@
         <input type="password" class="trabajo__textbox" placeholder="Ingrese la Contraseña Nuevamente">
       </div>
           <div class="trabajo__contenedor">
-            <p for="fruta">tipo de oficio:</p>
+            <p for="oficio">tipo de oficio:</p>
             <select class="trabajo__combox">
               <option value="">N/A</option>
               <option value="">Mesero</option>
@@ -63,5 +65,6 @@
       <button type="submit" class="botones__boton">registrarse</button>
     </section>
   </form>
+  <script type="module" src="../js/subirFoto.js"></script>
 </body>
 </html>
